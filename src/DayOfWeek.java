@@ -1,23 +1,15 @@
 public class DayOfWeek {
-        public static void main(String[] args) {
-            boolean result = isWeekend("Thursday");
-            System.out.println(result);
-
-        }
-        public static boolean isWeekend(String weekday) {
-            if (weekday == "Monday") {
-                return false;
-            } else if (weekday == "Tuesday") {
-                return false;
-            } else if (weekday == "Wednesday") {
-                return false;
-            } else if (weekday == "Thursday") {
-                return false;
-            } else if (weekday == "Friday") {
-                return false;
-            } else if (weekday == "Saturday") {
-                return true;
-            } else return weekday == "Sunday";
-        }
-
+    public static void main(String[] args) {
+        System.out.println(isWeekend("Wednesday"));
     }
+
+    public static boolean isWeekend(String weekday) {
+        String[] weekends = {"Saturday", "Sunday"};
+        for (String weekend : weekends) {
+            if (weekend.equals (weekday)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
